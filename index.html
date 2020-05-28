@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  <title>Витрина</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo-wrapper">
+            <a href="/" class="header__logo"></a>
+            <div class="menu" id="menu">
+              <div class="menu__row"></div>
+              <div class="menu__row"></div>
+              <div class="menu__row"></div>
+              <ul name="popup" id="popup" class="menu__popup">
+                <li>
+                  <a href="https://imumk.ru/showcase" class="menu__link">Витрина</a>
+                </li>
+                <li>
+                  <a href="https://imumk.ru/pages/about" class="menu__link">О проекте</a>
+                </li>
+                <li>
+                  <a href="https://imumk.ru/news" class="menu__link">Новости</a>
+                </li>
+                <li>
+                  <a href="https://imumk.ru/feedback" class="menu__link">Помощь</a>
+                </li>
+                <li>
+                  <a href="https://imumk.ru/pages/apps" class="menu__link">Скачать</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+            <nav class="buttons">
+              <a href="https://imumk.ru/showcase" class="header-button">Каталог</a>
+              <a href="https://school.imumk.ru/regpin.html" class="header-button">Активация</a>
+              <a href="https://school.imumk.ru" class="header-button">Вход</a>
+            </nav>
+        </div>
+      </header>
+      <div class="main-content">
+        <h1 class="showcase">Витрина</h1>
+        <div class="filter">
+          <div>
+            <select name="subject" onclick="filter('subject')" id="subject" class="filter__form">
+              <option value="Все предметы">Все предметы</option>
+              <option value="Алгебра">Алгебра</option>
+              <option value="Английский язык">Английский язык</option>
+              <option value="Биология">Биология</option>
+              <option value="География">География</option>
+              <option value="Геометрия">Геометрия</option>
+              <option value="Демо-версия">Демо-версия</option>
+              <option value="Информатика">Информатика</option>
+              <option value="История">История</option>
+              <option value="Литература">Литература</option>
+              <option value="Математика">Математика</option>
+              <option value="Обществознание">Обществознание</option>
+              <option value="Окружающий мир">Окружающий мир</option>
+              <option value="Робототехника">Робототехника</option>
+              <option value="Русский язык">Русский язык</option>
+              <option value="Физика">Физика</option>
+              <option value="Химия">Химия</option>
+            </select>
+          </div>          
+          <div>
+            <select name="genre" onclick="filter('genre')" id="genre" class="filter__form">
+              <option value="Все жанры">Все жанры</option>
+              <option value="Демо">Демо</option>
+              <option value="Задачник">Задачник</option>
+              <option value="Подготовка к ВПР">Подготовка к ВПР</option>
+              <option value="Подготовка к ЕГЭ">Подготовка к ЕГЭ</option>
+              <option value="Рабочая тетрадь">Рабочая тетрадь</option>
+            </select>
+          </div>
+          <div>
+            <select name="grade" onclick="filter('grade')" id="grade" class="filter__form">
+              <option value="Все классы">Все классы</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+            </select>
+          </div>          
+          <div>
+            <input type="text" placeholder="Поиск" id="input" onclick="search()" class="search">
+          <button class="search-button" onclick="search()"></button>
+          </div>          
+        </div>
+        <div class="price-mode">
+          <div class="row">
+            <div class="toggle-button-cover">
+              <div class="button-cover">
+                <div class="button r" id="button-1">
+                  <input type="checkbox" class="checkbox" id="price-mode">
+                  <div class="knobs"></div>
+                </div>                
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div class="loadingio-spinner-spinner-glptsjwtg6p" id="loader"><div class="ldio-cwnrw62o9nw">
+        <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div></div>
+        <h1 class="results" id="results">Результаты поиска:</h1>
+        <div class="list" id="list">
+        </div>
+      </div>
+      
+    </div>    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__info">
+          <p class="footer__text">&copy; ООО "Физикон Лаб", 2013-2020</p>
+          <a href="#" class="footer__text terms">Пользовательское соглашение</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://twitter.com/oblako_znanij" class="footer__link" id="twitter"></a>
+          <a href="https://vk.com/oblako_znanij" class="footer__link" id="vk"></a>
+          <a href="https://www.facebook.com/oblako_znanij/?ref=oblako" class="footer__link"id="facebook"></a>
+          <a href="https://www.instagram.com/oblako_znanij/" class="footer__link"id="instagram"></a>
+        </div>
+        <div class="footer__contacts">
+          <p class="footer__text">+7(499)322-07-57, info@imumk.ru</p>
+          <a href="#" class="footer__text rules">Правила пользования сайтом</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+<script src="index.js"></script>
+</html>
